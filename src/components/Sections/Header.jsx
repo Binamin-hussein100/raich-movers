@@ -3,9 +3,12 @@ import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import HeaderImage from "../../assets/img/header-img.png";
+import HeaderImage from "../../assets/img/add/header.jpeg";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+// Icons
+import { FaWhatsapp } from "react-icons/fa";
+
 
 export default function Header() {
   return (
@@ -19,7 +22,8 @@ international and domestic moving services for everyone ranging from commercial
 establishments to residential houses.
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Whatsapp  " />
+            
+            <FullButton title="Whatsapp"  icon={FaWhatsapp}/>
           </BtnWrapper>
         </div>
       </LeftSide>
@@ -32,9 +36,10 @@ establishments to residential houses.
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.</em>
+                <em>Stay professional: Pack them right, offer the best possible service at an affordable,
+but above all get them there in “one” piece.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
+              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>OUR PHILOSOPHY</p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
@@ -110,12 +115,16 @@ const ImageWrapper = styled.div`
   justify-content: flex-end;
   position: relative;
   z-index: 9;
+  height: 40%
   @media (max-width: 960px) {
     width: 100%;
     justify-content: center;
   }
 `;
 const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   @media (max-width: 560px) {
     width: 80%;
     height: auto;

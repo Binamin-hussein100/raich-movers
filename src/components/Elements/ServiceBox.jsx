@@ -6,7 +6,7 @@ import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
 import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
 import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
 
-export default function ServiceBox({icon, title, subtitle}) {
+export default function ServiceBox({icon, title}) {
   let getIcon;
 
   switch (icon) {
@@ -32,7 +32,6 @@ export default function ServiceBox({icon, title, subtitle}) {
     <Wrapper className="flex flexColumn">
       <IconStyle>{getIcon}</IconStyle>
       <TitleStyle className="font20 extraBold">{title}</TitleStyle>
-      <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>
     </Wrapper>
   );
 }
